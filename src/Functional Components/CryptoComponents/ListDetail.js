@@ -5,22 +5,20 @@ import styled from 'styled-components';
 
 const ListDetail = ({ CryptoInfo }) => {
 
-    const { FROMSYMBOL, PRICE, OPEN24HOUR } = CryptoInfo;
-
-    const roundedPrice = Number((PRICE).toFixed(1));
-    const roundedAverage = Number((OPEN24HOUR).toFixed(1));
-
+    const { name } = CryptoInfo;
+    const { price,  percent_change_24h } = CryptoInfo.quotes.GBP
+    const roundPrice = price.toFixed(2);
 
     return (
         <ListCard>
             <ListCardSection>
-                <TextStyle>{FROMSYMBOL}</TextStyle>
+                <TextStyle>{name}</TextStyle>
             </ListCardSection>
             <ListCardSection>
-                <TextStyle>£{roundedPrice}</TextStyle>
+                <TextStyle>£{roundPrice}</TextStyle>
             </ListCardSection>
             <ListCardSection>
-                <TextStyle>£{roundedAverage}</TextStyle>
+                <TextStyle>{percent_change_24h}%</TextStyle>
             </ListCardSection>
         </ListCard>
 

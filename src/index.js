@@ -3,8 +3,8 @@ import { render } from 'react-dom';
 import styled from 'styled-components';
 import HeaderSection from './Functional Components/HeaderComponents/HeaderSection';
 import CryptoSection from './Functional Components/CryptoComponents/CryptoSection';
-import './index.css';
 import InfoBanner from './Functional Components/Reusable Components/InfoBanner';
+import './index.css';
 
 const App = () => {
     return (
