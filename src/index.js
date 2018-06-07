@@ -10,7 +10,7 @@ const App = () => {
     return (
         <Wrapper>
             <HeaderSection />
-            <InfoBanner infoText={["This website gathers all information from the CryptoCompare API. More information about the API can be found here", <a href="https://www.cryptocompare.com/api" target="_blank" rel="noopener noreferrer"> Visit CryptoCompare </a>]} />
+            <InfoBanner infoText={["This website gathers all information from the CoinMarketCap API. More information about the API can be found here", <a href="https://coinmarketcap.com/api/" target="_blank" rel="noopener noreferrer"> Visit CoinMarketCap. </a>]} />
             <CryptoSection />
         </Wrapper>
     );

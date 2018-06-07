@@ -19,7 +19,7 @@ export default class CryptoList extends Component {
     }
 
     fetchError() {
-        this.setState({onFetchError: 'Uh Oh! Looks like we are having trouble contacting to CryptoCompare. Our team of trained monkeys are trying to fix this.'});
+        this.setState({onFetchError: 'Uh Oh! Looks CoinMarketCap are having some issues. Their team of trained monkeys are trying to fix this.'});
     }
 
     renderError() {
