@@ -23,9 +23,9 @@ body {
   min-height: 10vh;
   background-color: #5e91f2;
   z-index: 1;
-  -webkit-box-shadow: 5px 10px 19px 0px rgba(0,0,0,0.15);
-  -moz-box-shadow: 5px 10px 19px 0px rgba(0,0,0,0.15);
-  box-shadow: 5px 10px 19px 0px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 5px 10px 19px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 5px 10px 19px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 10px 19px 0px rgba(0, 0, 0, 0.15);
 }
 .CryptoCard {
   display: flex;
@@ -49,4 +49,7 @@ body {
   font-size: 2vmin;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
+}
+.searchBarMarginRemoval {
+  margin: 0;
 }
