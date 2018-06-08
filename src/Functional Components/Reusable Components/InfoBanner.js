@@ -13,7 +13,7 @@ const InfoBanner = (props) => {
 export default InfoBanner;
 
 const TextStyle = styled.h3`
-    font-size: 2vmin;
+    font-size: 2.5vmin;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     text-align: center;

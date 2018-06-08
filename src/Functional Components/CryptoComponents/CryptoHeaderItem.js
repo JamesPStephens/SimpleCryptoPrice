@@ -4,7 +4,7 @@ import { Col } from 'react-bootstrap';
 
 const CryptoHeaderItem = (props) => {
     return (
-        <Col xs={4} sm={4} md={4} lg={4}>
+        <Col xs={3} sm={3} md={3} lg={3}>
             <TextStyle>{props.cryptoHeaderText}</TextStyle>
         </Col>
     );

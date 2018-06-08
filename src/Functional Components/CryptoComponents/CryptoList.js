@@ -5,19 +5,19 @@ import AlertBanner from '../Reusable Components/AlertBanner';
 import ListDetail from './ListDetail';
 
 export default class CryptoList extends Component {
-    state = { AllCurrencies: [], onFetchError: '' };
+    state = { CurrencyData: [], onFetchError: '' };
 
 
     componentDidMount() {
-        this.fetchRequest();
+        this.fetchRequest()
+        setInterval(this.fetchRequest.bind(this), 300000);
     }
 
     fetchRequest() {
-        axios.get('https://api.coinmarketcap.com/v2/ticker/?convert=GBP')
-        .then(response => this.setState({ AllCurrencies: response.data.data}))
+        axios.get('https://api.coinmarketcap.com/v2/ticker/?convert=GBP&limit=100')
+        .then(response => this.setState({ CurrencyData: response.data.data}))
         .catch(this.fetchError.bind(this))
     }
-
     fetchError() {
         this.setState({onFetchError: 'Uh Oh! Looks CoinMarketCap are having some issues. Their team of trained monkeys are trying to fix this.'});
     }
@@ -28,16 +28,14 @@ export default class CryptoList extends Component {
         }
     }
 
+
     renderCrypto() {
+        const CryptoArrayFull = Object.values(this.state.CurrencyData);
+        CryptoArrayFull.sort((a, b) => a.rank - b.rank);
 
-        console.log(this.state.AllPrices);
-
-        const CryptoArrayFull = Object.values(this.state.AllCurrencies);
-
-       return CryptoArrayFull.map(CryptoInfo => 
-            <ListDetail key={CryptoInfo.id} CryptoInfo={CryptoInfo} />
+        return CryptoArrayFull.map(CryptoInfo => 
+             <ListDetail key={CryptoInfo.id} CryptoInfo={CryptoInfo} />
         );
-
     }
 
     render() {
