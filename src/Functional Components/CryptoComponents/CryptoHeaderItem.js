@@ -9,7 +9,7 @@ const CryptoHeaderItem = props => (
 );
 
 const TextStyle = styled.h3`
-  color: #f1f2f6;
+  color: #FFFFFF;
   font-size: 3vmin;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;

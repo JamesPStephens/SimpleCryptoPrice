@@ -4,7 +4,7 @@ import { Navbar } from 'react-bootstrap';
 
 const HeaderSection = () => {
   return (
-    <Navbar className="Header" staticTop={true}>
+    <Navbar className="Header">
       <Navbar.Header>
         <TextStyle>
           SimpleCryptoPrice<TextStyleSmall>.com</TextStyleSmall>
@@ -16,15 +16,17 @@ const HeaderSection = () => {
 
 const TextStyle = styled.h3`
   color: #ffffff;
-  font-size: 4vmin;
+  font-size: 3.5vmin;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
+  text-align: center;
 `;
 const TextStyleSmall = styled.span`
   color: #ffffff;
   font-size: 2vmin;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
+  text-align: center;
 `;
 
 export default HeaderSection;

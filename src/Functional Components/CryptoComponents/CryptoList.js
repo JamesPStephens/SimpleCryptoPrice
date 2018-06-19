@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Col, FormGroup, FormControl, Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import axios from 'axios';
 import AlertBanner from '../Reusable Components/AlertBanner';
 import ListDetail from './ListDetail';
+import SearchBar from './SearchBar';
 
 export default class CryptoList extends Component {
   state = { CurrencyData: [], onFetchError: '', searchTerm: '' };
@@ -46,25 +47,8 @@ export default class CryptoList extends Component {
 
   render() {
     return (
-      <Col lg={6} md={6} sm={8} xs={10} className="CryptoList">
-        <Row className="test">
-          <FormGroup controlId="formBasicText" className="searchBarMarginRemoval">
-            <FormControl
-              bsSize="large"
-              className="SearchBarGrow"
-              lg={12}
-              md={12}
-              sm={12}
-              xs={12}
-              onChange={this.handleSearchTermChange}
-              value={this.state.searchTerm}
-              type="text"
-              placeholder="Search"
-            />
-            <FormControl.Feedback />
-          </FormGroup>
-        </Row>
-
+      <Col lg={6} md={6} sm={10} xs={11} className="CryptoList">
+        <SearchBar onChange={this.handleSearchTermChange} value={this.state.searchTerm} />
         {this.renderError()}
         {this.renderCrypto()}
       </Col>

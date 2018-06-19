@@ -3,7 +3,7 @@ import CryptoHeaderItem from './CryptoHeaderItem';
 import { Col } from 'react-bootstrap';
 
 const CryptoHeaderSection = () => (
-  <Col lg={6} md={6} sm={8} xs={10} className={'CryptoHeader'}>
+  <Col lg={6} md={6} sm={10} xs={11} className={'CryptoHeader'}>
     <CryptoHeaderItem cryptoHeaderText={'Rank'} />
     <CryptoHeaderItem cryptoHeaderText={'Coin'} />
     <CryptoHeaderItem cryptoHeaderText={'Price'} />

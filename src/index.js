@@ -6,11 +6,13 @@ import CryptoSection from './Functional Components/CryptoComponents/CryptoSectio
 import InfoBanner from './Functional Components/Reusable Components/InfoBanner';
 import './index.css';
 
+
 const App = () => {
     return (
         <Wrapper>
             <HeaderSection />
-            <InfoBanner infoText={["This website gathers all information from the CoinMarketCap API. More information about the API can be found here", <a href="https://coinmarketcap.com/api/" target="_blank" rel="noopener noreferrer"> Visit CoinMarketCap. </a>]} />
+            <InfoBanner infoText={["This website gathers all information from the CoinMarketCap API. More information about the API can be found here ", 
+            <a href="https://coinmarketcap.com/api/" target="_blank" rel="noopener noreferrer">Visit CoinMarketCap. </a>]} />
             <CryptoSection />
         </Wrapper>
     );
@@ -20,7 +22,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 `
 
 
