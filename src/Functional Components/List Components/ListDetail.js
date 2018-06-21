@@ -3,14 +3,8 @@ import ListCard from './ListCard';
 import ListCardSection from './ListCardSection';
 import styled from 'styled-components';
 
-function updateStateUSD(Currency) {
-    this.setState({Currency})
-  }
 
 export default class ListDetail extends Component {
-
-    state = { Currency: '' }
-    updateStateUSD = updateStateUSD.bind(this)
 
     render() {
         const { name, rank, symbol } = this.props.CryptoInfo;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormGroup, FormControl, Row , Form, Button } from 'react-bootstrap';
+import { Row, Form, FormGroup, FormControl } from 'react-bootstrap';
 import 'font-awesome/css/font-awesome.min.css'
 
 const SearchBar = (props) => {
@@ -16,7 +16,5 @@ const SearchBar = (props) => {
         
     );
 }
-
-
 
 export default SearchBar;

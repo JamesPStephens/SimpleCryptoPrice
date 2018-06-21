@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import CryptoList from './CryptoList';
-import CryptoHeaderSection from './CryptoHeaderSection';
+import ListData from '../../Class Components/ListData';
+import ListHeaderSection from './ListHeaderSection';
 
 
-const CryptoSection = () => {
+const ListSection = () => {
     return (
         <Wrapper>
-            <CryptoHeaderSection />
-            <CryptoList />
+            <ListHeaderSection />
+            <ListData />
         </Wrapper>
     );
 }
@@ -22,4 +22,4 @@ const Wrapper = styled.div`
     height: 85vh;
 `
 
-export default CryptoSection;
+export default ListSection;

@@ -3,7 +3,7 @@ import { Alert } from 'react-bootstrap';
 import styled from 'styled-components';
 
 const InfoBanner = ( props ) => (
-  <Alert bsStyle="info" className={'Banners'} className='InfoBanner'>
+  <Alert bsStyle="info" className='InfoBanner'>
     <TextStyle>{props.infoText}</TextStyle>
   </Alert>
 );

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Col } from 'react-bootstrap';
 import axios from 'axios';
-import AlertBanner from '../Reusable Components/AlertBanner';
-import ListDetail from './ListDetail';
-import SearchBar from './SearchBar';
+import AlertBanner from '../Functional Components/Reusable Components/AlertBanner';
+import ListDetail from '../Functional Components/List Components/ListDetail';
+import SearchBar from '../Functional Components/Reusable Components/SearchBar';
 
-export default class CryptoList extends Component {
+export default class ListData extends Component {
   state = { CurrencyData: [], onFetchError: '', searchTerm: '' };
   
   handleSearchTermChange = (e) => {
