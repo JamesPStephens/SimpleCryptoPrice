@@ -1,13 +1,14 @@
 import React from 'react';
-import { Col, FormGroup, FormControl, Row , Form } from 'react-bootstrap';
+import { FormGroup, FormControl, Row , Form, Button } from 'react-bootstrap';
+import 'font-awesome/css/font-awesome.min.css'
 
 const SearchBar = (props) => {
     return (
-        <Row> 
-            <Form>
-                <FormGroup controlId="formBasicText"  className="SearchBarWrapper">
+        <Row className="SearchBarWrapper"> 
+            <Form className="SearchBarContainer">
+                <FormGroup controlId="formBasicText">
                     <FormControl className="SearchBar" bsSize="large" lg={12} md={12} sm={12} xs={12} onChange={props.onChange} 
-                    value={props.value} type="text" placeholder="Search"
+                    value={props.value} type="text" placeholder="Search..."
                     />
                 </FormGroup>
             </Form>
@@ -15,5 +16,7 @@ const SearchBar = (props) => {
         
     );
 }
+
+
 
 export default SearchBar;

@@ -7,10 +7,11 @@ import SearchBar from './SearchBar';
 
 export default class CryptoList extends Component {
   state = { CurrencyData: [], onFetchError: '', searchTerm: '' };
-
-  handleSearchTermChange = e => {
-    this.setState({ searchTerm: e.target.value });
+  
+  handleSearchTermChange = (e) => {
+      this.setState({ searchTerm: e.target.value })
   };
+
 
   componentDidMount() {
     this.fetchRequest();
@@ -29,12 +30,14 @@ export default class CryptoList extends Component {
         'Uh Oh! Looks CoinMarketCap are having some issues. Their team of trained monkeys are trying to fix this.'
     });
   }
-
+  
   renderError() {
     if (this.state.onFetchError) {
       return <AlertBanner alertText={this.state.onFetchError} />;
     }
   }
+
+
 
   renderCrypto() {
     const CryptoArrayFull = Object.values(this.state.CurrencyData);
